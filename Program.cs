@@ -6,7 +6,7 @@ namespace EntityFramework.Demo
 	{
 		static void Main(string[] args)
 		{
-			var context = new EmployeeContext("");
+			var context = new EmployeeContext("Data Source=DESKTOP-AA3LST2\SQLEXPRESS;Initial Catalog=TimeManagement;Persist Security Info=True;User ID=sa;Password=***********");
 			var provider = new EmployeeProvider(context);
 			var employee = provider.Get(1);
 			Console.WriteLine($"Welcome {employee.FirstName} {employee.LastName}");
